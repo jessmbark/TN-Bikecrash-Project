@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TN Bike Crash Project</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      </head>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-size: 20px;
+            font-family: "EB Garamond", serif;
+            text-rendering: optimizeLegibility;
+        }
+
+        .content {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .header {
+            padding: 3em 0;
+        }
+
+        a {
+            color: #ff8800;
+        }
+
+        .footer {
+            background: #f4f4f4;
+            text-align: center;
+            font-size: 0.8em;
+            margin-top: 0.8em;
+            padding: 4em 0;
+            max-width: 100%
+        }
+
+        figure {
+            margin: 0;
+            padding-bottom: 0em;
+        }
+
+        figcaption {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 0.5em;
+            color: #666;
+        }
+
+        h1 {
+            font-family: "EB Garamond", serif;
+            font-weight: bold;
+            font-size: 3em;
+            line-height: 1.1;
+        }
+
+        .subhead {
+            font-family: "EB Garamond", serif;
+        }
+
+        iframe,
+        img,
+        video {
+            max-width: 100%;
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 0;
+            padding-bottom: 1.2em;
+        }
+
+        ul {
+            margin: 0;
+            padding-bottom: 1em;
+            line-height: 1.6;
+        }
+
+        iframe {
+            padding-bottom: 1.2em;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background: #fffbaf;
+            font-size: 0.85em;
+        }
+
+        .full-width figure {
+            text-align: center;
+        }
+        /* Aligner CSS borrowed, and slightly modified, from https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/ */
+        .Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Aligner-item {
+  max-width: 35%;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+
+
+        /* margin on mobile */
+        @media (max-width: 640px) {
+            body {
+                font-size: 18px;
+            }
+
+            .content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>A Rocky Road</h1>
+            <p class="subhead">An analysis of Tennessee's bicycle crash data since 2010</p>
+            <div class="full-width">
+                <figure>
+                <img src="https://www.tnvacation.com/sites/default/files/styles/article_embedded_image/public/embedded-image/Sequatchie%20Valley%20route%20photo_CREDIT%20Shannon%20Burke.jpg.webp">
+                <figcaption>Two cyclists on a bike trail near the Smokies. (Source: <a href="https://www.tnvacation.com/articles/cycling-adventures-and-culinary-delights-near-smokies">TNVacation)</a></figcaption>
+                </figure>
+                            </div>
+        </div>
+        <div class="byline">
+            <p>By: Jessica M. Barker</a></p>
+        </div>
+        <p>When I was a kid, I loved to ride my bike. But as an adult, I don't always feel safe riding one, especially in my home state of Tennessee. I found out that the Tennessee Highway Patrol and the Tennessee Department of Safety & Homeland Security collect annual <a href="https://www.tn.gov/content/dam/tn/safety/documents/crash_stats/Bicyclist.pdf">data</a> on the number of bicycle crashes for each of the state's 95 counties.</p>
+        <p>The agencies broke crashes down into three categories: fatal, PDO, and injury. PDO crashes refer to crashes that caused more than $400 in damages. The data also "[e]xcludes parking lot and private property crashes as well as crashes with less than $400 damage. Fatal crash numbers may not match NHTSA [National Highway Traffic Safety Administration] crash numbers."</p>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/18735400"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <p>The chart above represents over <b>5,700</b> crashes. For every year between 2010 and 2023, injury crashes made up between <b>80 and 92 percent</b> of all crashes.</p>
+        <p>The agencies also collected data for the first six months of 2024, which is shown below. Each square represents one crash. Red squares represent fatal crashes, orange squares represent injury crashes, and yellow squares represent crashes that caused over $400 in property damage.</p>
+        <div class="Aligner">
+            <div class="Aligner-item Aligner-item--top"></div>
+            <div class="Aligner-item"> <div id="my-svg-chart"><svg width="640" height="200"><rect x="0" y="0" width="20" height="20" style="fill: rgb(193, 31, 31);"></rect><rect x="22" y="0" width="20" height="20" style="fill: rgb(255, 197, 2);"></rect><rect x="44" y="0" width="20" height="20" style="fill: rgb(255, 197, 2);"></rect><rect x="66" y="0" width="20" height="20" style="fill: rgb(255, 197, 2);"></rect><rect x="88" y="0" width="20" height="20" style="fill: rgb(255, 197, 2);"></rect><rect x="110" y="0" width="20" height="20" style="fill: rgb(255, 197, 2);"></rect><rect x="132" y="0" width="20" height="20" style="fill: rgb(255, 197, 2);"></rect><rect x="154" y="0" width="20" height="20" style="fill: rgb(255, 197, 2);"></rect><rect x="176" y="0" width="20" height="20" style="fill: rgb(255, 197, 2);"></rect><rect x="198" y="0" width="20" height="20" style="fill: rgb(255, 197, 2);"></rect><rect x="0" y="22" width="20" height="20" style="fill: rgb(255, 197, 2);"></rect><rect x="22" y="22" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="44" y="22" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="66" y="22" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="88" y="22" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="110" y="22" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="132" y="22" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="154" y="22" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="176" y="22" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="198" y="22" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="0" y="44" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="22" y="44" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="44" y="44" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="66" y="44" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="88" y="44" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="110" y="44" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="132" y="44" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="154" y="44" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="176" y="44" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="198" y="44" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="0" y="66" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="22" y="66" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="44" y="66" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="66" y="66" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="88" y="66" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="110" y="66" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="132" y="66" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="154" y="66" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="176" y="66" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="198" y="66" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="0" y="88" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="22" y="88" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="44" y="88" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="66" y="88" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="88" y="88" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="110" y="88" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="132" y="88" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="154" y="88" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="176" y="88" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="198" y="88" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="0" y="110" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="22" y="110" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="44" y="110" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="66" y="110" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="88" y="110" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="110" y="110" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="132" y="110" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="154" y="110" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="176" y="110" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="198" y="110" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="0" y="132" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="22" y="132" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="44" y="132" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="66" y="132" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="88" y="132" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="110" y="132" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="132" y="132" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="154" y="132" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="176" y="132" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="198" y="132" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="0" y="154" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="22" y="154" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect><rect x="44" y="154" width="20" height="20" style="fill: rgb(255, 136, 0);"></rect></svg></div>
+        </div>
+        <div class="Aligner-item Aligner-item--bottom"></div>
+      </div>
+      <p>Since 2010, <b>117</b> people died in bicycle crashes.</p>
+      <p>An average year:</p>
+        <ul>
+            <li>Sees over <b>405</b> total crashes</li>
+            <li>And sees <b>8</b> deaths from bicycle crashes</li>
+        </ul>
+        <p>Follow-up work could explore why the state's data may not match national data. Follow-up work could also seek to find records of crashes that resulted in less than $400 in damages.</p>
+    </div>
+    <div class="footer">
+        <div class="content">
+            <p>You can find the GitHub repository containing the code for this analysis <a href="https://github.com/jessmbark/TN-Bikecrash-Process">here</a>.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
